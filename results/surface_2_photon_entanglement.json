@@ -1,0 +1,38 @@
+version 1.0
+
+qubits 10
+
+NVentangle q0 q1
+full_swap q0 0
+full_swap q1 0
+NVentangle q0 q1
+QgateEZ q0 0 1.5707963267948966
+QgateCC q0 1 0.0 3.141592653589793
+full_swap q0 0
+QgateEZ q0 0 1.5707963267948966
+QgateCC q0 1 0.0 3.141592653589793
+full_swap q0 0
+QgateUC q0 1 -1.57 1.570796326794897 1
+QgateCZ q0 1 -3.141592653589793
+full_swap q0 1
+QgateE q0 1.57 1.5707963267948966
+QgateE q0 0.0 3.141592653589793
+full_swap q0 1
+QgateEZ q0 0 1.5707963267948966
+QgateCC q0 3 0.0 3.141592653589793
+full_swap q0 0
+QgateEZ q0 0 1.5707963267948966
+QgateCC q0 2 0.0 3.141592653589793
+full_swap q0 0
+QgateEZ q1 0 1.5707963267948966
+QgateCC q1 3 0.0 3.141592653589793
+full_swap q1 0
+QgateEZ q1 0 1.5707963267948966
+QgateCC q1 2 0.0 3.141592653589793
+full_swap q1 0
+Initialize q0
+measure q0
+measure q0
+measure q0
+measure q1
+measure q1
